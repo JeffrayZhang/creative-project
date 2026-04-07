@@ -115,7 +115,13 @@ function StoryRouteMap({ activeSlug = null, compact = false, visited = [], compl
           {/* route */}
           <path d={routePath} className="route-line-shadow" />
           <path d={routePath} className="route-line" />
-          <path d={routePath} className="route-line route-line-main route-animated" />
+          <path d={routePath} className="route-line route-line-main route-draw" />
+          <path d={routePath} className="route-line route-line-main route-march" />
+
+          {/* traveler dot */}
+          <circle r="1.2" className="route-traveler">
+            <animateMotion dur="10s" repeatCount="indefinite" path={routePath} />
+          </circle>
 
           {/* region labels */}
           {regionLabels.map((label) => (

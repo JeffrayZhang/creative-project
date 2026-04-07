@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { ChevronUp, Menu, Moon, Sun, X } from 'lucide-react';
 import { achievements as allAchievements } from '../data/achievements';
 import { useProgress } from '../hooks/useProgress';
 import AchievementToastHost from './AchievementToast';
+import AnimatedOutlet from './AnimatedOutlet';
 
 function ScrollToTop() {
   const location = useLocation();
@@ -78,6 +79,11 @@ function SiteLayout() {
 
   return (
     <div className="site-shell">
+      <div className="bg-shapes" aria-hidden="true">
+        <div className="bg-shape bg-shape-1" />
+        <div className="bg-shape bg-shape-2" />
+        <div className="bg-shape bg-shape-3" />
+      </div>
       <ScrollToTop />
       <a href="#main-content" className="skip-link">Skip to main content</a>
 
@@ -139,7 +145,7 @@ function SiteLayout() {
 
       <main id="main-content" className="site-main">
         <div className="container py-4 py-lg-5">
-          <Outlet />
+          <AnimatedOutlet />
         </div>
       </main>
 

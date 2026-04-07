@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import AchievementPanel from '../components/AchievementPanel';
+import AnimatedCounter from '../components/AnimatedCounter';
 import PageIntro from '../components/PageIntro';
 import ProgressBar from '../components/ProgressBar';
 import StoryRouteMap from '../components/StoryRouteMap';
@@ -25,9 +26,9 @@ function HomePage() {
           { to: '/story-map', label: 'Explore the full route', variant: 'secondary' },
         ]}
         stats={[
-          { value: '5', label: 'city chapters' },
-          { value: `${totalXP}`, label: 'total XP' },
-          { value: '3', label: 'research questions' },
+          { value: '5', label: 'city chapters', animate: true },
+          { value: `${totalXP}`, label: 'total XP', animate: true },
+          { value: '3', label: 'research questions', animate: true },
         ]}
       />
 

@@ -1,5 +1,16 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import AnimatedCounter from './AnimatedCounter';
+
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.09, delayChildren: 0.05 } },
+};
+
+const rise = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.25, 0.1, 0.25, 1] } },
+};
 
 function PageIntro({
   eyebrow,
@@ -14,19 +25,19 @@ function PageIntro({
 
   return (
     <motion.section
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45 }}
+      variants={stagger}
+      initial="hidden"
+      animate="visible"
       className="page-hero paper-card"
     >
       <div className="row g-4 align-items-start">
         <div className={copyColumnClass}>
-          <p className="eyebrow mb-3">{eyebrow}</p>
-          <h1 className="page-title">{title}</h1>
-          <p className="page-intro mb-0">{intro}</p>
+          <motion.p variants={rise} className="eyebrow mb-3">{eyebrow}</motion.p>
+          <motion.h1 variants={rise} className="page-title">{title}</motion.h1>
+          <motion.p variants={rise} className="page-intro mb-0">{intro}</motion.p>
 
           {actions.length > 0 ? (
-            <div className="hero-actions">
+            <motion.div variants={rise} className="hero-actions">
               {actions.map((action) => (
                 <Link
                   key={`${action.to}-${action.label}`}
@@ -36,28 +47,30 @@ function PageIntro({
                   {action.label}
                 </Link>
               ))}
-            </div>
+            </motion.div>
           ) : null}
 
           {stats.length > 0 ? (
-            <div className="hero-stat-grid" aria-label="Page highlights">
+            <motion.div variants={rise} className="hero-stat-grid" aria-label="Page highlights">
               {stats.map((stat) => (
                 <div key={`${stat.value}-${stat.label}`} className="hero-stat-card">
-                  <span className="hero-stat-value">{stat.value}</span>
+                  <span className="hero-stat-value">
+                    {stat.animate ? <AnimatedCounter value={stat.value} /> : stat.value}
+                  </span>
                   <span className="hero-stat-label">{stat.label}</span>
                 </div>
               ))}
-            </div>
+            </motion.div>
           ) : null}
         </div>
 
         {note ? (
-          <div className="col-lg-4">
+          <motion.div variants={rise} className="col-lg-4">
             <aside className="hero-note h-100">
               <p className="hero-note-title mb-2">{noteTitle}</p>
               <p className="hero-note-body">{note}</p>
             </aside>
-          </div>
+          </motion.div>
         ) : null}
       </div>
     </motion.section>
