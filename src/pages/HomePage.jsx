@@ -17,8 +17,8 @@ function HomePage() {
     <div>
       <PageIntro
         eyebrow="Mutual Aid Story Atlas"
-        title="How digital mutual aid turns simple tools into community care"
-        intro="Follow Mina, a fictional composite character, across five cities to see how chats, maps, volunteer sheets, and low-bandwidth communication can support care, trust, and participation. Each stop is a chapter with an interactive scene, and together they answer the project's three research questions."
+        title="How WhatsApp groups, shared maps, and M-Pesa transfers become community care"
+        intro="Follow Mina across five cities to see how people use the digital tools already on their phones — group chats, spreadsheets, social media, mobile money, SMS trees — to coordinate care, build community, and solve problems that formal institutions are too slow or too distant to reach."
         note={storyIntro.note}
         noteTitle="Why Mina is fictional"
         actions={[
@@ -164,27 +164,28 @@ function HomePage() {
         <div className="row g-4 align-items-stretch">
           <div className="col-lg-8">
             <div className="paper-card h-100">
-              <p className="eyebrow mb-3">Why this format works for the assignment</p>
+              <p className="eyebrow mb-3">The tools behind the care</p>
               <div className="reading-width">
                 <p>
-                  A story map solves the problem of being too open-ended. It gives the project a concrete structure: the user follows one journey, moves through chapters in sequence, completes interactive tasks, and then arrives at a final interpretation. That makes the research questions visible in action instead of leaving them as separate abstract prompts.
+                  Every chapter centres on digital tools people actually use. In Toronto, a WhatsApp group and a shared Google Maps layer. In São Paulo, Instagram Stories and TikTok videos that make a community fridge visible and joinable. In Warsaw, a Telegram channel with multilingual map pins and Signal for private requests. In Nairobi, M-Pesa transfers tracked in a transparent Google Sheet. In Manila, an SMS tree, Viber group, and volunteer-maintained OpenStreetMap working together during a typhoon.
                 </p>
                 <p className="mb-0">
-                  It also fits the course theme well. Digital citizenship becomes something the user witnesses and practices through the interface: noticing needs, understanding trust and accessibility, and recognizing the difference between reciprocal care and top-down support.
+                  None of these tools were built for mutual aid. But when communities use them intentionally — with clear norms, shared access, and creative documentation — they become infrastructure for civic participation, learning, and positive social change. That is the core argument of this project: digital citizenship is not just about being safe online. It is about using the tools you already have to coordinate care, share power, and build something together.
                 </p>
               </div>
             </div>
           </div>
           <div className="col-lg-4">
             <div className="paper-card h-100 accent-panel">
-              <p className="eyebrow mb-3">Quick path</p>
+              <p className="eyebrow mb-3">Five dimensions of digital citizenship</p>
               <ul className="plain-list mb-4">
-                <li>Read the route</li>
-                <li>Play the chapter interactions</li>
-                <li>Visit the learning page</li>
-                <li>End on the audience page</li>
+                <li><strong>Civic participation</strong> — WhatsApp votes, shared ledgers, community decisions</li>
+                <li><strong>Community building</strong> — fridge networks, support circles, volunteer coordination</li>
+                <li><strong>Learning</strong> — documentation, knowledge sharing, teaching newcomers</li>
+                <li><strong>Creativity</strong> — social media storytelling, illustrated guides, video documentation</li>
+                <li><strong>Positive social change</strong> — layered alert systems, transparent mutual support, resilient infrastructure</li>
               </ul>
-              <Link to="/story-map" className="primary-link-button">Go to the full story map</Link>
+              <Link to="/story-map" className="primary-link-button">See it in action</Link>
             </div>
           </div>
         </div>

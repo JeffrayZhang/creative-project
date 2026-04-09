@@ -166,16 +166,17 @@
 }
 
 [data-theme='dark'] .primary-link-button {
-  background: linear-gradient(180deg, var(--accent), #4daabb);
+  background: var(--accent);
   border-color: var(--accent);
   color: #0f1517;
 }
 
 [data-theme='dark'] .primary-link-button:hover,
 [data-theme='dark'] .primary-link-button:focus-visible {
-  background: linear-gradient(180deg, #7acade, #5cb9cd);
-  border-color: #7acade;
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
   color: #0f1517;
+  box-shadow: 0 4px 12px rgba(92, 185, 205, 0.2);
 }
 
 [data-theme='dark'] .filter-button.active,
@@ -202,7 +203,7 @@
 
 [data-theme='dark'] .option-tile.active,
 [data-theme='dark'] .mini-choice.active {
-  background: linear-gradient(180deg, var(--accent), #4daabb);
+  background: var(--accent);
   color: #0f1517;
   border-color: var(--accent);
 }
@@ -364,8 +365,8 @@ body {
     radial-gradient(circle at bottom right, rgba(161, 102, 66, 0.09), transparent 24%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0)),
     var(--bg);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  line-height: 1.65;
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -390,7 +391,7 @@ h3,
 h4,
 .brand-title {
   margin-top: 0;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--text);
@@ -459,8 +460,7 @@ button:focus-visible {
   z-index: 40;
   backdrop-filter: blur(16px);
   background: rgba(245, 239, 230, 0.9);
-  border-bottom: 1px solid rgba(199, 181, 157, 0.76);
-  box-shadow: 0 6px 24px rgba(30, 24, 13, 0.04);
+  border-bottom: 1px solid rgba(199, 181, 157, 0.65);
 }
 
 .header-bar {
@@ -495,29 +495,31 @@ button:focus-visible {
 }
 
 .brand-mark {
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 2.8rem;
+  height: 2.8rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 1rem;
-  border: 1px solid rgba(199, 181, 157, 0.92);
-  background:
-    radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.95), transparent 38%),
-    linear-gradient(180deg, #fffdfa, #f4eadb);
-  box-shadow: var(--shadow-sm);
+  border-radius: 0.75rem;
+  border: 1px solid var(--accent);
+  background: var(--accent);
   font-weight: 800;
-  color: var(--accent);
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #fff;
+  font-size: 0.85rem;
+  letter-spacing: -0.02em;
 }
 
 [data-theme='dark'] .brand-mark {
-  background: linear-gradient(180deg, var(--paper), var(--paper-deep));
-  border-color: var(--line-strong);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0f1517;
 }
 
 .brand-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.15;
+  font-weight: 700;
 }
 
 .brand-subtitle {
@@ -655,7 +657,7 @@ button:focus-visible {
 .page-hero {
   position: relative;
   overflow: hidden;
-  padding: clamp(1.65rem, 4vw, 3.25rem);
+  padding: clamp(1.65rem, 4vw, 3rem);
   background:
     radial-gradient(circle at top right, rgba(33, 77, 87, 0.08), transparent 30%),
     radial-gradient(circle at bottom left, rgba(161, 102, 66, 0.08), transparent 26%),
@@ -697,24 +699,26 @@ button:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
+  font-size: 0.73rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--accent);
 }
 
 .page-title {
-  font-size: clamp(2.5rem, 5vw, 4.7rem);
-  line-height: 0.98;
-  max-width: 11ch;
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1;
+  max-width: 14ch;
   margin-bottom: 1rem;
 }
 
 .page-intro {
-  font-size: 1.08rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
   color: var(--muted);
-  max-width: 62ch;
+  max-width: 60ch;
 }
 
 .hero-actions {
@@ -732,16 +736,16 @@ button:focus-visible {
 }
 
 .hero-stat-card {
-  padding: 0.95rem 1rem;
-  border-radius: 1.2rem;
-  border: 1px solid rgba(199, 181, 157, 0.7);
-  background: rgba(255, 255, 255, 0.78);
+  padding: 0.85rem 1rem;
+  border-radius: 0.85rem;
+  border: 1px solid rgba(199, 181, 157, 0.5);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .hero-stat-value {
   display: block;
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
   font-weight: 700;
   line-height: 1.1;
   color: var(--text);
@@ -749,8 +753,8 @@ button:focus-visible {
 
 .hero-stat-label {
   display: block;
-  margin-top: 0.3rem;
-  font-size: 0.88rem;
+  margin-top: 0.25rem;
+  font-size: 0.82rem;
   color: var(--muted);
 }
 
@@ -781,8 +785,10 @@ button:focus-visible {
 .section-title,
 .card-title,
 .module-title {
-  font-size: clamp(1.4rem, 2vw, 1.8rem);
-  line-height: 1.15;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.3rem, 2vw, 1.65rem);
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .reading-width {
@@ -838,13 +844,14 @@ button:focus-visible {
 
 .primary-link-button {
   justify-content: center;
-  min-height: 3rem;
-  padding: 0.82rem 1.18rem;
+  min-height: 2.85rem;
+  padding: 0.72rem 1.15rem;
   border: 1px solid var(--accent);
-  background: linear-gradient(180deg, var(--accent), var(--accent-strong));
+  background: var(--accent);
   color: #fff;
   text-decoration: none;
-  box-shadow: 0 10px 24px rgba(33, 77, 87, 0.2);
+  font-weight: 600;
+  box-shadow: none;
 }
 
 .secondary-link-button,
@@ -854,12 +861,13 @@ button:focus-visible {
 .option-tile,
 .timeline-card,
 .mini-choice {
-  min-height: 2.9rem;
+  min-height: 2.85rem;
   padding: 0.68rem 1rem;
   border: 1px solid var(--line-strong);
   background: rgba(255, 255, 255, 0.82);
   color: var(--text);
-  box-shadow: 0 8px 20px rgba(30, 24, 13, 0.04);
+  font-weight: 600;
+  box-shadow: none;
 }
 
 .secondary-link-button {
@@ -870,10 +878,10 @@ button:focus-visible {
 .primary-link-button:focus-visible,
 .filter-button.active,
 .filter-button.active-action {
-  background: linear-gradient(180deg, #173f48, #112f36);
-  border-color: #173f48;
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
   color: #fff;
-  box-shadow: 0 14px 30px rgba(33, 77, 87, 0.22);
+  box-shadow: 0 4px 12px rgba(33, 77, 87, 0.18);
 }
 
 .secondary-link-button:hover,
@@ -892,14 +900,11 @@ button:focus-visible {
 .mini-choice:focus-visible,
 .route-stop:hover,
 .route-stop:focus-visible,
-.route-card:hover,
-.story-card:hover,
 .link-card:hover,
 .resource-list-card:hover,
 .route-stop-list-link:hover,
 .route-stop-list-link:focus-visible {
   border-color: var(--accent);
-  box-shadow: var(--shadow-sm);
 }
 
 button:disabled,
@@ -946,6 +951,8 @@ button:disabled,
   width: 2.7rem;
   height: 2.7rem;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1rem;
 }
 
 .chapter-stamp {
@@ -1018,7 +1025,7 @@ button:disabled,
   position: absolute;
   inset: 0 auto auto 0;
   width: 100%;
-  height: 4px;
+  height: 3px;
   background: linear-gradient(90deg, var(--accent), rgba(161, 102, 66, 0.75));
   opacity: 0.85;
 }
@@ -1729,6 +1736,7 @@ button:disabled,
 
 .not-found-title {
   font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 900;
   margin-bottom: 0.75rem;
 }
 
@@ -1763,6 +1771,7 @@ button:disabled,
 
 .back-to-top:hover {
   box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
 }
 
 @keyframes fade-in {
@@ -1781,6 +1790,8 @@ button:disabled,
 .footer-links {
   row-gap: 0.5rem;
 }
+
+
 
 /* ────────────────────── loading ────────────────────── */
 
@@ -2051,8 +2062,8 @@ button:disabled,
 }
 
 .journey-card-city {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-weight: 700;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-weight: 800;
   font-size: 1.35rem;
   line-height: 1.2;
   margin: 0 0 0.15rem;
@@ -2262,11 +2273,8 @@ body::after {
 
 .route-card:hover,
 .story-card:hover {
-  box-shadow: 0 0 0 1px var(--accent), var(--shadow);
-}
-
-.paper-card {
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  border-color: var(--accent);
+  box-shadow: var(--shadow-sm);
 }
 
 /* ────────────────────── enhanced hero gradient ────────────────────── */
@@ -2296,7 +2304,7 @@ body::after {
 .module-choice:active,
 .option-tile:active,
 .mini-choice:active {
-  transform: scale(0.97);
+  transform: scale(0.98);
   transition-duration: 0.08s;
 }
 
@@ -2374,7 +2382,7 @@ body::after {
 }
 
 .achievement-toast-title {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-weight: 700;
   font-size: 1rem;
   margin-bottom: 0.1rem;
@@ -2484,7 +2492,7 @@ body::after {
 }
 
 .achievement-tile-title {
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-weight: 700;
   font-size: 0.92rem;
   margin-bottom: 0.25rem;

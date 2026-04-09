@@ -190,9 +190,10 @@ function TimelineBuilder({ module, onComplete }) {
   const [checked, setChecked] = useState(false);
   const [showAnswer, setShowAnswer] = useState(false);
 
+  const isComplete = selected.length === module.events.length;
   const correct =
     checked &&
-    selected.length === module.events.length &&
+    isComplete &&
     selected.every((event, index) => event.id === module.events[index].id);
 
   useEffect(() => {
@@ -204,6 +205,12 @@ function TimelineBuilder({ module, onComplete }) {
     setChecked(false);
     setShowAnswer(false);
     setSelected((current) => [...current, event]);
+  };
+
+  const revealAnswer = () => {
+    setSelected([...module.events]);
+    setChecked(true);
+    setShowAnswer(true);
   };
 
   const reset = () => {
@@ -224,7 +231,7 @@ function TimelineBuilder({ module, onComplete }) {
             type="button"
             className={`timeline-card ${selected.find((item) => item.id === event.id) ? 'used' : ''}`}
             onClick={() => pick(event)}
-            disabled={Boolean(selected.find((item) => item.id === event.id))}
+            disabled={showAnswer || Boolean(selected.find((item) => item.id === event.id))}
           >
             {event.label}
           </button>
@@ -234,17 +241,21 @@ function TimelineBuilder({ module, onComplete }) {
       <p className="small-label mb-2">Step 2: review your timeline</p>
       <div className="timeline-build mb-4">
         {module.events.map((event, index) => {
-          const chosen = selected[index];
+          const chosen = showAnswer ? event : selected[index];
           const isRight = checked && chosen && chosen.id === event.id;
           const isWrong = checked && chosen && chosen.id !== event.id;
           return (
             <div key={event.id} className={`timeline-slot ${isRight ? 'right' : ''} ${isWrong ? 'wrong' : ''}`}>
               <span className="slot-index">{index + 1}</span>
               <div>
-                <p className="mb-1">{chosen ? chosen.label : 'Choose the next event from the pool above.'}</p>
-                {checked && (isRight || isWrong) ? (
+                <p className="mb-1">
+                  {chosen ? chosen.label : 'Choose the next event from the pool above.'}
+                </p>
+                {checked && chosen ? (
                   <p className="mb-0 text-body-secondary">
-                    {(showAnswer || isRight) ? event.explanation : 'Reconsider what the community needs to know first.'}
+                    {(showAnswer || isRight)
+                      ? event.explanation
+                      : 'Not quite — think about what the community needs to know at this stage.'}
                   </p>
                 ) : null}
               </div>
@@ -254,10 +265,15 @@ function TimelineBuilder({ module, onComplete }) {
       </div>
 
       <div className="d-flex flex-wrap gap-2">
-        <button type="button" className="filter-button active-action" onClick={() => setChecked(true)}>
+        <button
+          type="button"
+          className="filter-button active-action"
+          onClick={() => setChecked(true)}
+          disabled={!isComplete || showAnswer}
+        >
           <Check size={15} /> Check order
         </button>
-        <button type="button" className="subtle-button" onClick={() => setShowAnswer(true)}>
+        <button type="button" className="subtle-button" onClick={revealAnswer} disabled={showAnswer}>
           Reveal suggested order
         </button>
         <button type="button" className="subtle-button" onClick={reset}>
@@ -266,10 +282,10 @@ function TimelineBuilder({ module, onComplete }) {
       </div>
 
       {checked ? (
-        <div className={`result-panel mt-4 ${correct ? 'success' : ''}`} role="status" aria-live="polite">
+        <div className={`result-panel mt-4 ${correct || showAnswer ? 'success' : ''}`} role="status" aria-live="polite">
           <p className="mb-2">
-            <strong>{correct ? 'Nicely sequenced.' : 'Almost there.'}</strong>{' '}
-            {correct
+            <strong>{correct ? 'Nicely sequenced.' : showAnswer ? 'Here is the suggested order.' : 'Almost there.'}</strong>{' '}
+            {correct || showAnswer
               ? module.completion
               : 'Think about why visibility usually comes before logistics, and why reflection happens after the response.'}
           </p>

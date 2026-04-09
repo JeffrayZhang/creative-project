@@ -1,30 +1,30 @@
 export const storyIntro = {
   character: 'Mina',
   note:
-    'Mina is a fictional composite character created for this project. Her route across different cities is a storytelling device that helps compare how digital mutual aid works in different local contexts. The stops draw on public patterns of community care rather than a single documentary case.',
+    'Mina is a fictional composite character. Her route across different cities is a storytelling device that helps compare how digital mutual aid works in different local contexts. The stops draw on real patterns of community care — WhatsApp mutual aid groups, community fridge networks, M-Pesa savings circles, and SMS alert trees — rather than a single documentary case.',
 };
 
 export const coreQuestions = [
   {
     id: 'q1',
     title:
-      'How do digital tools help enable bottom-up community care and mutual aid outside formal institutions and organizations?',
+      'How do everyday digital tools — group chats, shared spreadsheets, community maps — enable civic participation and bottom-up care outside formal institutions?',
     short:
-      'How do digital tools enable bottom-up care?',
+      'How do everyday tools enable civic participation?',
   },
   {
     id: 'q2',
     title:
-      'What features make digital mutual aid platforms feel trustworthy, accessible, and inclusive to community members?',
+      'What platform design choices — around trust, accessibility, language, and privacy — shape who can participate and who gets left out?',
     short:
-      'What makes mutual aid platforms trustworthy and inclusive?',
+      'What design choices shape who can participate?',
   },
   {
     id: 'q3',
     title:
-      'How does mutual aid differ from charity or institutional support in terms of power, participation, and reciprocity?',
+      'How does mutual aid differ from charity or institutional support in terms of power, creativity, learning, and reciprocity?',
     short:
-      'How is mutual aid different from charity or institutional support?',
+      'How is mutual aid different from charity?',
   },
 ];
 
@@ -40,27 +40,27 @@ export const storyChapters = [
     subtitle: 'A weekend food gap becomes a community signal.',
     need: 'Mina needs food before the weekend after her part-time shift is cut.',
     hook:
-      'In Toronto, Mina learns that a simple chat thread, a shared pantry map, and a few careful design choices can do something formal systems often cannot: respond before the office reopens.',
+      'In Toronto, Mina discovers that a WhatsApp group, a Google Sheet, and a shared map pin can do something formal systems often cannot: respond before the office reopens on Monday.',
     story: [
       'Mina is a student who has just lost a shift at work. It is Friday afternoon. Her campus emergency office closes soon, her kitchen is nearly empty, and the weekend is still ahead. On paper there are services she can try. In practice, each one depends on hours, intake, or waiting.',
-      'A friend sends her a link to a student mutual aid channel. It is not a polished platform. It is a small network built from a group chat, a shared document, and a simple map of community fridges and free pantries. What matters is that it is active, local, and maintained by people who know the area well.',
-      'Within minutes, Mina sees why digital tools matter to bottom-up care. The network does not replace deeper social support, but it reduces delay, shares local knowledge, and lets people coordinate directly. The technology is ordinary. The civic participation is not.',
+      'A friend sends her a WhatsApp link to a student mutual aid group. It is not a polished platform. It is a small network built from a group chat with pinned guidelines, a Google Sheet listing volunteer drivers and available pantry items, and a shared Google Maps layer marking community fridges and free food spots across the city. What matters is that it is active, local, and maintained by people who know the area.',
+      'Within twenty minutes, someone responds with a screenshot of the fridge map, a pickup time, and a note that an e-transfer grocery card is available. The technology is ordinary — WhatsApp, Google Sheets, a shared map. The civic participation is not. Mina is watching people coordinate care in real time, using tools they already had on their phones.',
     ],
     takeawayCards: [
       {
-        label: 'Bottom-up response',
+        label: 'Everyday tools, civic purpose',
         text:
-          'Group chats, shared maps, and lightweight forms can coordinate support without waiting for a formal intake desk.',
+          'WhatsApp groups, Google Sheets, and shared map layers become infrastructure for care when communities organize them intentionally.',
       },
       {
-        label: 'Trust in small signals',
+        label: 'Trust through design',
         text:
-          'Pinned rules, pickup details, and privacy-conscious posting make a fast response feel safer and more believable.',
+          'Pinned guidelines, clear pickup instructions, and privacy-conscious posting norms turn a group chat into something people can trust quickly.',
       },
       {
         label: 'Reciprocity starts here',
         text:
-          'After receiving help, Mina stays in the network by posting updates and later taking a volunteer shift.',
+          'After receiving help, Mina updates the fridge map with current stock levels and later signs up for a volunteer shift — the line between giving and receiving blurs.',
       },
     ],
     chapterLinks: ['q1', 'q2', 'q3'],
@@ -68,20 +68,20 @@ export const storyChapters = [
       type: 'chat',
       title: 'Interactive scene: the first message',
       description:
-        'Move through Mina’s first request. Each choice shows how digital mutual aid can lower barriers without turning a need into a formal application.',
+        'Move through Mina’s first WhatsApp request. Each choice shows how a group chat, a shared map, and clear norms can lower barriers without turning a need into a formal application.',
       intro:
-        'Friday, 4:12 PM. Mina has twelve dollars left, an empty fridge, and less than an hour before the campus office closes.',
+        'Friday, 4:12 PM. Mina has twelve dollars left, an empty fridge, and less than an hour before the campus office closes. A friend just sent her a WhatsApp link.',
       rounds: [
         {
           prompt: 'How should Mina ask for help first?',
           choices: [
             {
               label:
-                'Post a short request in the student mutual aid chat with her general area and what she needs for the weekend.',
+                'Post a short request in the WhatsApp mutual aid group with her general area and what she needs for the weekend.',
               response:
-                'A volunteer answers with a pantry map, a nearby pickup point, and a note that a grocery card is available tonight.',
+                'A volunteer replies with a screenshot of the Google Maps fridge layer, a nearby pickup point, and a note that an e-transfer grocery card is available tonight.',
               insight:
-                'Bottom-up care works because requests reach people who already share local knowledge and can respond quickly.',
+                'Bottom-up care works because WhatsApp messages reach people who already share local knowledge and can respond in minutes, not days.',
             },
             {
               label:
@@ -134,18 +134,18 @@ export const storyChapters = [
           choices: [
             {
               label:
-                'Mina thanks the group, updates the pantry map, and signs up for a future volunteer shift when she can.',
+                'Mina thanks the group, updates the Google Maps fridge layer with current stock, and signs up for a volunteer shift in the shared spreadsheet.',
               response:
-                'Receiving help becomes part of staying connected to the network instead of a fixed identity as a recipient.',
+                'Receiving help becomes part of staying connected to the network. Mina is already contributing by keeping the map accurate for the next person.',
               insight:
-                'Mutual aid is reciprocal. People can give, receive, and remain part of the same community over time.',
+                'Mutual aid is reciprocal. Updating a shared map or signing up in a spreadsheet means giving and receiving happen through the same tools.',
             },
             {
-              label: 'The network closes the thread and never records what worked.',
+              label: 'The network closes the WhatsApp thread and never records what worked.',
               response:
-                'The immediate need is met, but useful information for the next person disappears.',
+                'The immediate need is met, but useful information for the next person disappears from the chat history.',
               insight:
-                'Digital mutual aid also depends on shared learning, archived updates, and visible coordination.',
+                'Digital mutual aid depends on documentation — archived messages, updated spreadsheets, and current map pins are how the network learns.',
             },
             {
               label:
@@ -174,27 +174,27 @@ export const storyChapters = [
     need:
       'A neighbourhood fridge is running low before a holiday weekend, and the network needs to respond quickly.',
     hook:
-      'In São Paulo, Mina sees how digital mutual aid can be creative, visible, and collective. The technology is simple, but the coordination is skillful.',
+      'In São Paulo, Mina sees how Instagram stories, a volunteer spreadsheet, and a neighbourhood WhatsApp group turn a community fridge into a creative, self-sustaining civic project.',
     story: [
-      'Mina reaches a neighbourhood where a community fridge sits outside a local storefront. It works because many kinds of labour happen around it: people cook, cycle, deliver, clean, translate, repost updates, and notice when the shelves are nearly empty.',
-      'The online side of the network is modest but effective. Organizers use short social posts, a shared volunteer sheet, and quick location updates to coordinate who can pick up donations and where food is available. Nothing here looks like a large platform. But the network behaves like infrastructure because people maintain it together.',
-      'This stop expands the project beyond emergency response. Digital mutual aid is also about community building, learning, and creativity. It invites people into a process rather than presenting care as a service delivered from above.',
+      'Mina reaches a neighbourhood where a community fridge sits outside a local storefront. It works because many kinds of labour happen around it: people cook, cycle, deliver, clean, translate, design posts, and notice when the shelves are nearly empty.',
+      'The digital side is where creativity shows up. Volunteers use Instagram Stories and Reels to document what is in the fridge, share recipe ideas for donated ingredients, and tell short visual stories about the people who keep the project running. A graphic design student creates illustrated infographics explaining how to donate safely. Someone else films a 30-second TikTok showing a full restock cycle, and it gets reshared across the neighbourhood. A shared Google Sheet tracks volunteer shifts, and a WhatsApp group handles real-time coordination: who can pick up a donation at 3pm, which fridge location needs restocking tonight.',
+      'This is digital citizenship as creative practice. The tools — Instagram, TikTok, Google Sheets, WhatsApp — are not being used for entertainment or self-promotion. They are being used to make community care visible, inviting, and easy to join. The fridge works because people do not just maintain it. They tell its story, teach others how to contribute, and build a shared identity around the work.',
     ],
     takeawayCards: [
       {
-        label: 'Community building',
+        label: 'Creativity as civic work',
         text:
-          'Public updates and shared task lists help neighbours see where they can join, not just where they can consume.',
+          'Instagram stories, illustrated guides, and short-form video turn mundane logistics into something neighbours want to follow and join.',
       },
       {
-        label: 'Creativity matters',
+        label: 'Community building through visibility',
         text:
-          'Stories, reposts, location pins, and volunteer sheets become a flexible coordination system when used well.',
+          'When the work is publicly narrated — through social posts, stories, and reels — it invites participation instead of just delivering a service.',
       },
       {
-        label: 'Learning through action',
+        label: 'Learning through documentation',
         text:
-          'The network improves because people document what ran low, what moved quickly, and what should change next time.',
+          'Each restock cycle is logged in Google Sheets, discussed in WhatsApp, and reflected on in posts. The network learns from its own activity and teaches newcomers how to contribute.',
       },
     ],
     chapterLinks: ['q1', 'q2'],
@@ -206,33 +206,33 @@ export const storyChapters = [
       events: [
         {
           id: 'signal',
-          label: 'A volunteer posts that the fridge is almost empty before the holiday.',
+          label: 'A volunteer posts a photo of the nearly empty fridge to the WhatsApp group and Instagram Story.',
           explanation:
-            'Someone has to make the need visible before the network can respond. Digital tools help surface the gap early.',
+            'Someone has to make the need visible before the network can respond. A photo on Instagram is more shareable than a text message — it can reach people outside the core group.',
         },
         {
           id: 'reshare',
-          label: 'Organizers repost the update in clear neighbourhood language and note what items are needed most.',
+          label: 'Organizers repost the update with a designed graphic listing what items are needed most and where to drop them off.',
           explanation:
-            'A request becomes more actionable when it is specific, locally legible, and easy to share.',
+            'Creative design turns a request into something actionable. An illustrated graphic with clear icons and a drop-off address is easier to share and act on than a wall of text.',
         },
         {
           id: 'routes',
-          label: 'Volunteers claim pickup and delivery routes in a shared sheet.',
+          label: 'Volunteers claim pickup and delivery routes in the shared Google Sheet.',
           explanation:
-            'Once the need is clear, coordination tools help distribute work instead of leaving one person to do everything.',
+            'A Google Sheet everyone can edit distributes coordination work. Instead of one organizer managing everything, ten people each claim a task.',
         },
         {
           id: 'map',
-          label: 'The public map is updated so residents know where food will be available tonight.',
+          label: 'The public Google Maps layer is updated so residents know where food will be available tonight.',
           explanation:
-            'Public-facing information matters because care has to be findable, not just internally organized.',
+            'Public-facing information matters because care has to be findable. A map pin with hours and stock status does more than an internal chat message.',
         },
         {
           id: 'reflect',
-          label: 'After distribution, the group records what ran low and what should change next week.',
+          label: 'After distribution, the group updates the spreadsheet with what ran low and posts a recap Story for the neighbourhood.',
           explanation:
-            'Mutual aid becomes stronger when networks learn from each round of action and carry knowledge forward.',
+            'Documentation closes the loop. The spreadsheet becomes a knowledge base, and the recap Story teaches followers what the network does and how to join next time.',
         },
       ],
       completion:
@@ -251,11 +251,11 @@ export const storyChapters = [
     need:
       'Mina is helping a cousin who has arrived in a new city and cannot easily navigate service pages in the local language.',
     hook:
-      'In Warsaw, the problem is not only whether support exists. It is whether people can understand it, trust it, and use it without exposing themselves unnecessarily.',
+      'In Warsaw, the problem is not only whether support exists. It is whether a Telegram channel, a translated map, and a voice-note FAQ can make it usable for someone who just arrived.',
     story: [
-      'Mina is no longer only asking for aid; she is helping someone else find it. A cousin has arrived in the city and can see that resources exist, but most official pages are dense, translated poorly, or written for people who already know the system.',
-      'Volunteer-run channels fill part of that gap. A multilingual map, pinned explainers, short voice notes, and private contact options help new arrivals move from confusion to action. The support is still imperfect, but it feels more navigable because it acknowledges what people do not yet know.',
-      'This stop focuses on platform design. Trust is not a vague feeling. It is produced through clarity, updates, privacy, language access, and visible expectations about how the space works.',
+      'Mina is no longer only asking for aid; she is helping someone else find it. A cousin has arrived in the city and can see that resources exist, but most official pages are dense, translated poorly, or written for people who already know the system. The government website is in Polish only. The NGO pages have outdated addresses.',
+      'Volunteer-run Telegram channels fill part of that gap. One group maintains a Google Maps layer with multilingual pins marking legal aid, food banks, SIM card distribution points, and medical clinics — each pin annotated with transit directions, opening hours, and wheelchair accessibility. Pinned messages at the top of the channel explain what the group does, what it does not do, and how to request help privately through Signal rather than posting in public. Short voice notes in Ukrainian, Arabic, and English explain how to navigate the city’s transit card system.',
+      'This stop focuses on platform design. Trust is not a vague feeling. It is produced through real choices: using Telegram for discoverability but Signal for private requests, keeping the map updated weekly, translating not just words but the context around them. Good design means someone can look at the channel and know within thirty seconds whether it is safe, current, and relevant to them.',
     ],
     takeawayCards: [
       {
@@ -369,27 +369,27 @@ export const storyChapters = [
     need:
       'Transport costs are threatening Mina’s ability to get to work, and she joins a rotating support network that uses mobile tools to coordinate help.',
     hook:
-      'In Nairobi, the key question is not only whether support is available. It is who controls it, who participates, and whether people stay part of the network after help is given.',
+      'In Nairobi, the key question is not only whether M-Pesa can move money. It is who decides where it goes, who participates in that decision, and whether the person who receives help today can lead the group tomorrow.',
     story: [
-      'Mina meets a local support circle that helps members cover transport, urgent groceries, and sudden costs. The tools are simple: chat updates, mobile money, and a shared record of who needs help this week. The important feature is not technical sophistication. It is how the system distributes voice and responsibility.',
-      'In this network, people who have needed help in one moment may be the same people who verify routes, circulate updates, or contribute later. That structure feels different from both charity and formal services. It does not erase inequality, but it changes the social meaning of support.',
-      'This stop focuses on power. Mutual aid often tries to organize care horizontally, while charity can reinforce donor-recipient distance and institutions often centralize decisions through policy and administration.',
+      'Mina meets a local support circle — a chama, the Kenyan term for a savings and mutual support group. This one uses a WhatsApp group for daily coordination, M-Pesa for instant transfers, and a shared Google Sheet as a transparent ledger showing who contributed, who received, and what decisions were made. Every member can see the spreadsheet. Contributions are flexible: some send money, others verify matatu route costs, others update the group on which pharmacies have affordable stock this week.',
+      'Each week, the group votes in the WhatsApp chat on whose request is most urgent. Someone who received transport fare last month is now the person checking that a new pharmacy listing is accurate. The person who verified routes last week is now the one asking for help with rent. The technology makes this rotation visible: the ledger tracks giving and receiving side by side, and the chat history shows that leadership shifts constantly.',
+      'This is civic participation at the neighbourhood scale. The chama is a form of democratic self-governance, and the digital tools — M-Pesa, WhatsApp, Google Sheets — make it faster, more transparent, and more accountable than it could be on paper alone. It is also where mutual aid is most clearly different from charity: no one applies, no one is evaluated, and the people making decisions are the same people affected by them.',
     ],
     takeawayCards: [
       {
-        label: 'Participation',
+        label: 'Civic participation',
         text:
-          'People are treated as members of a network, not only as clients or recipients.',
+          'Weekly votes in WhatsApp, a transparent M-Pesa ledger, and rotating leadership mean every member is a decision-maker, not just a recipient.',
       },
       {
-        label: 'Power',
+        label: 'Digital tools distribute power',
         text:
-          'Decision-making is often more distributed in mutual aid than in charity or public service systems.',
+          'A shared Google Sheet makes finances visible to everyone. M-Pesa lets funds move in minutes. The technology flattens hierarchy.',
       },
       {
-        label: 'Reciprocity',
+        label: 'Reciprocity in practice',
         text:
-          'Support does not have to move in only one direction. People contribute in different ways when they can.',
+          'The ledger shows that giving and receiving happen side by side. People move between roles constantly, which is fundamentally different from charity.',
       },
     ],
     chapterLinks: ['q3', 'q1'],
@@ -469,27 +469,27 @@ export const storyChapters = [
     need:
       'A storm alert is approaching, and the network must reach people quickly across different devices, languages, and connectivity limits.',
     hook:
-      'In Manila, Mina sees that accessibility is not a box to check after a platform is built. It is part of how a network decides who counts and who can act in time.',
+      'In Manila, Mina sees that accessibility is not a feature to add later. When a typhoon is approaching, who your SMS tree reaches and who your Viber group misses is a life-and-death design decision.',
     story: [
-      'The final stop is future-facing. Mina joins a community group preparing for a storm alert. The challenge is not just to post information. It is to make sure that information travels across phones, bandwidth levels, languages, and neighbourhood habits quickly enough to matter.',
-      'The group does not rely on one channel. It stacks them. SMS reaches people with older phones. Voice notes help where text is slow or difficult. A shared map makes supply and shelter locations visible. Volunteers still add context, translation, and follow-up. The digital system works because it expects difference rather than assuming one ideal user.',
-      'This chapter ties the whole project together. Digital technologies support positive social change when they help communities coordinate, learn, and widen participation. The design question is always also a civic question: who gets reached, who gets heard, and who gets to help shape the response?',
+      'The final stop is future-facing. Mina joins a barangay-level community group preparing for a typhoon alert. The challenge is not just posting information. It is making sure that information reaches people across Nokia feature phones, spotty Globe Telecom connections, Tagalog and Bisaya speakers, elderly neighbours who do not use apps, and volunteers coordinating across three islands.',
+      'The group does not rely on one channel. They stack them. An SMS tree built on a simple phone contact list pushes short coded alerts (“SHELTER: Brgy Hall, 6PM, bring water”) to feature phones. A Viber group handles real-time coordination for smartphone users. Voice notes in Tagalog and Bisaya go out through Facebook Messenger, which has the widest reach locally. A volunteer-maintained OpenStreetMap layer tracks shelter locations, flooded roads, and supply distribution points in real time. Another volunteer runs a Google Form collecting damage reports that auto-populates a shared spreadsheet the whole network can see.',
+      'This chapter ties the whole project together. Positive social change is not about having the best technology. It is about choosing the right combination of tools for the people you are actually trying to reach. The SMS tree costs almost nothing. The OpenStreetMap edits are contributed by volunteers worldwide. The Viber group is maintained by a retired teacher. Digital citizenship here means building systems that expect difference — in devices, languages, abilities, and connectivity — rather than assuming one ideal user.',
     ],
     takeawayCards: [
       {
-        label: 'Accessibility as infrastructure',
+        label: 'Accessibility is the design',
         text:
-          'Low-bandwidth tools, translation, and multiple formats are not extras. They determine who can participate.',
+          'SMS for feature phones, Viber for smartphones, voice notes for non-readers, OpenStreetMap for live updates — each layer reaches people the others miss.',
       },
       {
-        label: 'Layered communication',
+        label: 'Real tools, stacked intentionally',
         text:
-          'The most inclusive networks often use several simple tools together instead of relying on one perfect platform.',
+          'SMS trees, Facebook Messenger, Viber groups, OpenStreetMap, and Google Forms are not impressive individually. Stacked together, they become resilient infrastructure.',
       },
       {
         label: 'Positive social change',
         text:
-          'When people can both receive updates and contribute information, digital tools become part of community resilience.',
+          'When a retired teacher, a student mapper, and a barangay captain all contribute to the same alert system, digital tools are enabling genuine community resilience.',
       },
     ],
     chapterLinks: ['q1', 'q2', 'q3'],
@@ -509,51 +509,51 @@ export const storyChapters = [
       options: [
         {
           id: 'sms-tree',
-          label: 'SMS tree with short updates and shelter codes',
+          label: 'SMS alert tree with coded shelter updates (works on any phone, no data needed)',
           tags: ['speed', 'low-bandwidth'],
           points: 2,
           explanation:
-            'SMS is fast, lightweight, and useful when people have basic phones or unstable connections.',
+            'SMS reaches Nokia feature phones and areas with no data signal. It is the only channel that works when the power grid is unstable and cell towers are overloaded.',
         },
         {
           id: 'voice-chain',
-          label: 'Voice-note chain in multiple languages through a messaging app',
+          label: 'Facebook Messenger voice notes in Tagalog and Bisaya (widest local reach)',
           tags: ['translation', 'feedback', 'low-bandwidth'],
           points: 2,
           explanation:
-            'Voice notes can work well for people who need language flexibility or who are moving quickly.',
+            'Facebook Messenger has the highest penetration in the Philippines. Voice notes bypass literacy barriers and work on slow connections. Multilingual audio reaches people text cannot.',
         },
         {
           id: 'public-map',
-          label: 'Public community map with pinned supply points, routes, and status updates',
+          label: 'Volunteer-maintained OpenStreetMap layer with live shelter, supply, and road status pins',
           tags: ['feedback', 'speed'],
           points: 2,
           explanation:
-            'A map makes distributed information easier to act on, especially when locations change.',
+            'OpenStreetMap is free, editable by anyone, and can be updated by volunteers worldwide. It makes distributed information spatial — easier to act on when you need directions, not just names.',
         },
         {
           id: 'livestream',
-          label: 'Image-heavy livestream with no text summary',
+          label: 'High-definition Instagram Live stream with no text summary or offline version',
           tags: ['speed'],
           points: 0,
           explanation:
-            'It may feel immediate, but it excludes many users if it depends on strong data and synchronous viewing.',
+            'This requires strong data, synchronous viewing, and excludes anyone on a feature phone or limited connection — the people most at risk during a storm.',
         },
         {
           id: 'english-form',
-          label: 'Long English-only form requiring detailed written answers before help is visible',
+          label: 'Long English-only Google Form requiring detailed written answers before seeing any resources',
           tags: [],
           points: 0,
           explanation:
-            'This increases friction and assumes too much time, literacy, and confidence from users under stress.',
+            'This assumes time, literacy, English fluency, and confidence from people under extreme stress. It recreates institutional barriers in digital form.',
         },
         {
           id: 'volunteer-sheet',
-          label: 'Shared volunteer sheet for pickups, translations, and supply checks',
+          label: 'Shared Google Sheet for pickup coordination, translations, and supply check-ins',
           tags: ['feedback'],
           points: 1,
           explanation:
-            'This helps coordination, but it works best when paired with outward-facing channels people can actually find.',
+            'A Google Sheet is great for internal coordination — but it only helps the team, not the public. It works best paired with outward-facing channels like SMS or Messenger.',
         },
       ],
       completion:
@@ -566,97 +566,97 @@ export const insightPanels = [
   {
     id: 'q1',
     title:
-      'How do digital tools help enable bottom-up community care and mutual aid outside formal institutions and organizations?',
+      'How do everyday digital tools enable civic participation and bottom-up care outside formal institutions?',
     answer:
-      'Digital tools help bottom-up care when they reduce delay, circulate local knowledge, and let ordinary people coordinate directly. The most effective tools in this project are not necessarily the most advanced ones. They are the ones that make help easier to find, request, route, and update in everyday life.',
+      'The most effective tools in this project are not purpose-built aid platforms. They are WhatsApp groups, Google Sheets, shared map layers, M-Pesa transfers, and Instagram Stories — everyday tools repurposed for civic coordination. They work because they reduce delay, circulate local knowledge, and let ordinary people organize care directly, without waiting for institutional approval or office hours.',
     evidence: [
       {
         slug: 'toronto',
         title: 'Toronto',
         text:
-          'A chat thread and pantry map helped Mina meet an immediate weekend need before a formal office reopened.',
+          'A WhatsApp group, a Google Sheet of pantry items, and a shared Google Maps layer helped Mina meet a weekend food need before any formal office reopened.',
       },
       {
         slug: 'sao-paulo',
         title: 'São Paulo',
         text:
-          'Short posts, volunteer sheets, and location updates turned a fridge network into flexible community infrastructure.',
+          'Instagram Stories, TikTok restock videos, and a volunteer Google Sheet turned a community fridge into visible, joinable civic infrastructure.',
       },
       {
         slug: 'manila',
         title: 'Manila',
         text:
-          'A layered outreach stack showed how digital coordination supports community resilience during rapidly changing conditions.',
+          'An SMS tree, Viber group, OpenStreetMap layer, and Google Forms damage report system coordinated typhoon response across devices and languages.',
       },
     ],
     implications: [
-      'Low-friction tools can be civic tools when they are maintained collectively.',
-      'Bottom-up care often works by linking small pieces of information into a public support network.',
-      'Digital citizenship includes the ability to help coordinate and sustain these networks.',
+      'Civic participation does not require special platforms — it requires intentional use of the tools people already have.',
+      'Bottom-up care works by linking small, specific pieces of digital information into a public support network.',
+      'Digital citizenship includes the ability to coordinate, maintain, and teach others how to use these networks.',
     ],
   },
   {
     id: 'q2',
     title:
-      'What features make digital mutual aid platforms feel trustworthy, accessible, and inclusive to community members?',
+      'What platform design choices shape who can participate and who gets left out?',
     answer:
-      'Trust grows when a platform explains itself clearly, protects privacy, stays updated, and makes room for different users. Accessibility and inclusion are built through language options, lightweight formats, location notes, and multiple ways to participate. These features help people feel that the platform was made with them in mind rather than simply placed in front of them.',
+      'Trust and inclusion are not abstract qualities. They are produced through specific design decisions: using Telegram for public discovery but Signal for private requests, keeping a map updated weekly, translating not just words but context, choosing SMS alongside Viber because not everyone has a smartphone. Every choice about language, bandwidth, privacy, and update frequency determines who can use a platform and who cannot.',
     evidence: [
       {
         slug: 'warsaw',
         title: 'Warsaw',
         text:
-          'Multilingual guides, voice notes, private contact options, and visible update dates turned a confusing information space into a usable one.',
+          'A Telegram channel with multilingual Google Maps pins, Signal for private contact, and voice notes in three languages turned a confusing information landscape into something navigable.',
       },
       {
         slug: 'toronto',
         title: 'Toronto',
         text:
-          'Privacy-conscious posting and clear practical details helped Mina ask for help without oversharing.',
+          'Pinned WhatsApp guidelines and privacy-conscious posting norms let Mina ask for help without oversharing personal information.',
       },
       {
         slug: 'manila',
         title: 'Manila',
         text:
-          'Low-bandwidth messaging and layered channels showed that inclusion depends on planning for different users, not one ideal user.',
+          'Stacking SMS, Viber, Facebook Messenger, and OpenStreetMap meant each channel reached people the others missed — designing for difference rather than one ideal user.',
       },
     ],
     implications: [
-      'A platform feels trustworthy when it is transparent, current, and respectful of vulnerability.',
-      'Accessibility is not only visual; it also includes language, bandwidth, mobility, privacy, and social confidence.',
-      'Inclusive mutual aid spaces widen participation by offering more than one way in.',
+      'A platform feels trustworthy when it explains itself, stays current, and respects vulnerability — not when it looks polished.',
+      'Accessibility includes language, bandwidth, device type, literacy, privacy, and social confidence. Visual design is only one part.',
+      'Inclusion means offering multiple ways in, because no single tool works for everyone.',
     ],
   },
   {
     id: 'q3',
     title:
-      'How does mutual aid differ from charity or institutional support in terms of power, participation, and reciprocity?',
+      'How does mutual aid differ from charity or institutional support in terms of power, creativity, learning, and reciprocity?',
     answer:
-      'Mutual aid differs because it tries to organize care through reciprocal participation rather than one-way giving or centralized administration. Charity can still provide support, and institutions can be essential, but they usually position people differently. Mutual aid is distinct in how it invites people to remain part of the network as contributors, witnesses, organizers, and recipients over time.',
+      'Mutual aid differs because it organizes care through reciprocal participation rather than one-way giving. In a Nairobi chama, the person who received M-Pesa fare last month is the person verifying pharmacy prices this week. In São Paulo, the volunteer who designed the Instagram infographic also restocks the fridge. People move between roles — giving, receiving, creating, teaching — which is fundamentally different from charity’s donor-recipient divide or an institution’s staff-client structure.',
     evidence: [
       {
         slug: 'nairobi',
         title: 'Nairobi',
         text:
-          'The rotating support network used shared decision-making and flexible contribution rather than donor control or formal intake.',
+          'Weekly WhatsApp votes, a transparent M-Pesa ledger in Google Sheets, and rotating leadership meant every member was a decision-maker, not just a recipient.',
       },
       {
         slug: 'toronto',
         title: 'Toronto',
         text:
-          'Mina moved from receiving groceries to updating the map and later volunteering, which made reciprocity visible.',
+          'Mina moved from receiving groceries to updating the Google Maps fridge layer and later volunteering — reciprocity made visible through the same tools.',
       },
       {
-        slug: 'warsaw',
-        title: 'Warsaw',
+        slug: 'sao-paulo',
+        title: 'São Paulo',
         text:
-          'Volunteer-run guidance helped people navigate systems without fully reproducing institutional hierarchy.',
+          'Volunteers who designed social media posts, filmed TikTok restock videos, and maintained the spreadsheet were all doing creative civic work — not just distributing food.',
       },
     ],
     implications: [
-      'Power matters: who decides, who is visible, and who is invited to participate shapes the meaning of support.',
-      'Mutual aid often reduces the distance between helper and helped, even when resources remain unequal.',
-      'The project does not reject institutional support; it shows that mutual aid solves different problems in different ways.',
+      'Power matters: who decides, who creates, who is visible, and who is invited to participate shapes the meaning of support.',
+      'Creativity and learning are part of mutual aid, not separate — designing posts, documenting processes, and teaching newcomers are all forms of contribution.',
+      'The project does not reject institutional support; it shows that mutual aid solves different problems through different power relationships.',
     ],
   },
 ];
@@ -666,11 +666,11 @@ export const audienceGuides = [
     id: 'students',
     title: 'Student organizations and campus groups',
     why:
-      'Campus communities often already use chats, spreadsheets, forms, and social accounts. This project shows how those same tools can be organized more intentionally for care, not only promotion.',
+      'You already use WhatsApp groups, Google Sheets, Instagram, and shared drives. This project shows how those same tools can be organized for care, not just club promotion — and how small design choices (pinned guidelines, privacy norms, a shared map) make the difference between a noisy group chat and genuine mutual support.',
     useCases: [
-      'Map mutual aid resources, campus supports, and off-campus services side by side.',
-      'Publish simple posting norms so requests feel safe and specific.',
-      'Create multiple ways to participate: donate, restock, translate, verify information, or accompany someone to a resource.',
+      'Build a Google Maps layer of campus and off-campus resources (food banks, free pantries, emergency contacts) and share it through your existing group chats.',
+      'Pin clear posting norms in your WhatsApp or Discord group so requests feel safe and specific from the start.',
+      'Create roles beyond donating: someone can maintain the map, someone can translate, someone can design Instagram posts that explain how the system works.',
     ],
     related: ['toronto', 'manila'],
   },
@@ -678,11 +678,11 @@ export const audienceGuides = [
     id: 'organizers',
     title: 'Community organizers and small nonprofits',
     why:
-      'The story map highlights how trust is built through visibility, update rhythms, and respectful design. Organizers can use it to think through both communication strategy and participation design.',
+      'The story map shows that trust is built through real platform choices: using Telegram for public updates but Signal for private requests, keeping your Google Maps pins current, and stacking SMS with social media so you reach more than one type of user.',
     useCases: [
-      'Audit whether your public-facing channels explain who runs the network and how help is shared.',
-      'Use layered communication rather than relying on a single platform or one high-bandwidth format.',
-      'Document what participants learn after each response so the network becomes easier to navigate over time.',
+      'Audit your public-facing channels: does your Telegram or Facebook group explain who runs it, what it can help with, and when it was last updated?',
+      'Stack your communication: pair social media with SMS or voice notes so you reach people without smartphones or strong data connections.',
+      'Document what your volunteers learn after each response in a shared doc or spreadsheet, so the network gets easier to navigate over time.',
     ],
     related: ['sao-paulo', 'warsaw', 'manila'],
   },
@@ -690,11 +690,11 @@ export const audienceGuides = [
     id: 'individuals',
     title: 'Individuals looking for support or ways to contribute',
     why:
-      'People often need a low-pressure way to understand what mutual aid is, how to ask for help, and how to contribute responsibly. The story format makes that easier to learn.',
+      'You do not need to be an organizer to participate in mutual aid. This project shows how sending one helpful WhatsApp message, updating one map pin, or designing one social media post is already a form of digital citizenship.',
     useCases: [
-      'See that asking for help can be part of participation rather than a sign of failure.',
-      'Learn what kinds of details make a request easier to act on without oversharing.',
-      'Find concrete roles beyond donating money: translation, rides, updates, verification, and follow-up.',
+      'See that asking for help in a mutual aid group is participation, not failure — and that the details you share (location, restrictions, availability) help the network work faster.',
+      'Find roles that match your skills: translation, map maintenance, graphic design for social posts, verifying information, or just resharing updates to your own contacts.',
+      'Learn from the Nairobi chapter that giving and receiving happen side by side — the person you help this month may be the person who helps you next.',
     ],
     related: ['toronto', 'nairobi'],
   },

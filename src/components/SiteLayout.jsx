@@ -159,7 +159,7 @@ function SiteLayout() {
               </p>
             </div>
             <div className="col-lg-4">
-              <p className="small-label mb-2">Go next</p>
+              <p className="small-label mb-2">Navigate</p>
               <div className="footer-links d-flex flex-wrap gap-2">
                 {navItems.map((item) => (
                   <NavLink key={item.to} to={item.to} end={item.end} className="footer-link">
