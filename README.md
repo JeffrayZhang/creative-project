@@ -1,4 +1,4 @@
-# Mutual Aid Story Atlas
+# Mutual Aid Story Atlas - LE/DIGT 1272 O - Mobilizing Digital Citizenship 
 
 An interactive story-map website exploring how digital tools support community care, trust, and reciprocity through mutual aid. Built with React, Vite, and Framer Motion.
 
